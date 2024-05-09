@@ -1,0 +1,22 @@
+enable-magisk-update = true
+patches-version = "v2.224.0-dev.6"
+integrations-version = "v0.151.0-dev.6"
+
+[YouTube Beta]
+app-name = "YouTube"
+build-mode = "both"
+included-patches = "'Add splash animation' 'MaterialYou' 'Remove player controls background' 'Enable slide to seek' 'Custom branding icon YouTube'"
+excluded-patches = "'Custom branding name YouTube' 'Announcements' 'Enable debugging' 'Change player flyout panel toggles'"
+version = "19.11.43"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
+arch = "arm64-v8a"
+apkmirror-arch = "arm64-v8a"
+
+[Music]
+# enabled = false
+build-mode = "both"
+version = "6.46.53"
+apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
+apkmirror-arch = "arm64-v8a"
+included-patches = "'Permanent shuffle' 'Permanent repeat'"
+excluded-patches = "'Custom branding name YouTube Music'"
