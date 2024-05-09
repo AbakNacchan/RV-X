@@ -73,7 +73,7 @@ jobs:
           file: ./build/*
           release_name: ReVanced eXtended v${{ steps.date.outputs.DATE }}
           tag: ${{ steps.next_ver_code.outputs.NEXT_VER_CODE }}
-	  draft: true
+          draft: true
           file_glob: true
           overwrite: true
 
