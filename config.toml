@@ -1,6 +1,6 @@
 enable-magisk-update = true
 
-[YouTube Beta]
+[YouTube]
 app-name = "YouTube"
 build-mode = "both"
 included-patches = "'Custom branding icon YouTube' 'Force disable Shorts dim' 'Force hide player buttons background' 'Hide animated button background' 'Hide player buttons background' 'MaterialYou' 'Spoof player parameters'"
