@@ -26,7 +26,7 @@ if [ ! -f ~/.rvmm_"$(date '+%Y%m')" ]; then
 fi
 
 if [ -f build.sh ]; then cd ..; fi
-if [ -d revanced-magisk-module ]; then
+if [ -d RV-X ]; then
 	pr "Checking for RV-X updates"
 	git -C RV-X fetch
 	if git -C RV-X status | grep -q 'is behind'; then
