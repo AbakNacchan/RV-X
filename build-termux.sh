@@ -26,11 +26,11 @@ if [ ! -f ~/.rvmm_"$(date '+%Y%m')" ]; then
 fi
 
 if [ -f build.sh ]; then cd ..; fi
-if [ -d RV-X ]; then
+if [ -d revanced-magisk-module ]; then
 	pr "Checking for RV-X updates"
 	git -C RV-X fetch
 	if git -C RV-X status | grep -q 'is behind'; then
-		pr "RV-X already is not synced with upstream."
+		pr "RV-X is not synced with upstream."
 		pr "Cloning RV-X. config.toml will be preserved."
 		cp -f RV-X/config.toml .
 		rm -rf RV-X
