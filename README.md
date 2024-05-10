@@ -1,6 +1,6 @@
 # RV-X
 
-For the ultimate experience, consider this build that always stays updated with the latest version, ensuring compatibility with key features like SponsorBlock™. It's designed for those who prioritize having the newest updates and a speedy performance, offering the freshest and highest quality experience over a more stable at [slower pace](https://github.com/AbakNacchan/revanced-magisk-module) version.
+For the ultimate experience, consider this build that always stays updated with the latest version, ensuring compatibility with key features like SponsorBlock™. It's designed for those who prioritize having newest updates and a speedy performance, offering the freshest and highest quality experience over stable build at [slower pace](https://github.com/AbakNacchan/RV) version.
 
 [![CI](https://github.com/AbakNacchan/RV-X/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/AbakNacchan/RV-X/actions/workflows/ci.yml)
 
