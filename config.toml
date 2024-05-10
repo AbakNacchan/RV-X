@@ -1,20 +1,23 @@
 enable-magisk-update = true
+patches-source = "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+cli-source = "inotia00/revanced-cli"
 
 [YouTube]
 app-name = "YouTube"
 build-mode = "both"
-included-patches = "'Custom branding icon YouTube' 'Force disable Shorts dim' 'Force hide player buttons background' 'Hide animated button background' 'Hide player buttons background' 'MaterialYou' 'Spoof player parameters'"
-excluded-patches = "'Custom branding name YouTube' 'Announcements' 'Enable debugging' 'Change player flyout panel toggles'"
-version = "19.16.39"
+included-patches = "'Hide double tap overlay filter' 'Hide player button background' 'MaterialYou'"
+excluded-patches = "'Custom branding name YouTube'"
+version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 arch = "arm64-v8a"
 apkmirror-arch = "arm64-v8a"
 
 [Music]
-enabled = false
+# enabled = false
 build-mode = "both"
 version = "latest"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 apkmirror-arch = "arm64-v8a"
-included-patches = "'Permanent shuffle' 'Permanent repeat'"
+included-patches = "'Hide overlay filter' 'Hide player overlay filter' 'Replace cast button'"
 excluded-patches = "'Custom branding name YouTube Music'"
