@@ -1,6 +1,6 @@
 # Config
 
-Adding another ReVanced app is as easy as this:
+Adding another RV-X app is as easy as this:
 ```toml
 [App Name]
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
@@ -16,15 +16,15 @@ There is existing example below with all defaults shown and all the keys explici
 ```toml
 parallel-jobs = 1
 # Amount of cores to use for parallel patching, if not set nproc is used
-patches-source = "inotia00/revanced-patches"
+patches-source = "anddea/revanced-patches"
 # Where to fetch patches bundle from ― default: "anddea/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
+integrations-source = "anddea/revanced-integrations"
 # Where to fetch integrations from ― default: "anddea/revanced-integrations"
 cli-source = "j-hc/revanced-cli"
 # Where to fetch cli from ― default: "j-hc/revanced-cli"
 # options like cli-source can also set per app
-rv-brand = "ReVanced eXtended"
-# Rebrand from 'ReVanced eXtended' to something different ― default: "ReVanced eXtended"
+rv-brand = "RV-X"
+# Rebrand from 'RV-X' to something different ― default: "RV-X"
 
 patches-version = "v2.111.4"
 # Use specific patches version ― default: latest available
@@ -48,9 +48,9 @@ include-stock = true
 build-mode = "apk"
 # 'both', 'apk' or 'module' ― default: apk
 excluded-patches = "'Some Patch' 'Some Other Patch'"
-# Whitespace seperated list of patches to exclude
+# Whitespace separated list of patches to exclude
 included-patches = "'Some Patch' 'Some Other Patch'"
-# Whitespace seperated list of patches to include, all default patches are included by default
+# Whitespace separated list of patches to include, all default patches are included by default
 exclusive-patches = false
 # Exclude all patches by default ― default: false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
@@ -64,5 +64,5 @@ apkmirror-arch = "arm64-v8a"
 # 'arm64-v8a', 'arm-v7a', 'all', 'both'. 'both' downloads both arm64-v8a and arm-v7a ― default: all
 ```
 
-# Building ReVanced
-Use the [original project](https://github.com/AbakNacchan/revanced-magisk-module) instead.
+# Building RV
+Use the [original project](https://github.com/AbakNacchan/RV) instead.
