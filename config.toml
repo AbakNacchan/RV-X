@@ -1,7 +1,4 @@
 enable-magisk-update = true
-patches-source = "inotia00/revanced-patches"
-integrations-source = "inotia00/revanced-integrations"
-cli-source = "inotia00/revanced-cli"
 
 [YouTube]
 app-name = "YouTube"
