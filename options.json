@@ -26,16 +26,16 @@
       "value" : "revanced_colored"
     } ]    
   }, {
-    "patchName" : "Corner radius",
+    "patchName" : "Force snackbar theme",
     "options" : [ {
-      "key" : "Cornerradius",
+      "key" : "CornerRadius",
       "value" : "4.0dip"
-    } ]    
-  }, {
-    "patchName" : "Background color",
-    "options" : [ {
+    }, {
       "key" : "BackgroundColor",
       "value" : "Base"
+    }, {
+      "key" : "StrokeColor",
+      "value" : "None"
     } ]    
   }, {
     "patchName" : "SponsorBlock",
