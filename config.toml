@@ -5,7 +5,7 @@ integrations-version = "v0.152.0-dev.9"
 [YouTube]
 app-name = "YouTube"
 build-mode = "both"
-included-patches = "''Custom branding icon YouTube' 'Force hide player buttons background' 'MaterialYou'"
+included-patches = "'Custom branding icon YouTube' 'Force hide player buttons background' 'MaterialYou'"
 excluded-patches = "'Custom branding name YouTube'"
 version = "19.16.39"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
@@ -13,7 +13,7 @@ arch = "arm64-v8a"
 apkmirror-arch = "arm64-v8a"
 
 [Music]
-# enabled = false
+enabled = false
 build-mode = "both"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
