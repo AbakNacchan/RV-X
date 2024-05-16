@@ -22,6 +22,7 @@ fi
 DEF_PATCHES_VER=$(toml_get "$main_config_t" patches-version) || DEF_PATCHES_VER=""
 DEF_INTEGRATIONS_VER=$(toml_get "$main_config_t" integrations-version) || DEF_INTEGRATIONS_VER=""
 DEF_CLI_VER=$(toml_get "$main_config_t" cli-version) || DEF_CLI_VER=""
+DEF_PRERELEASE=$(toml_get "$main_config_t" prerelease) || DEF_PRERELEASE=""
 DEF_PATCHES_SRC=$(toml_get "$main_config_t" patches-source) || DEF_PATCHES_SRC="anddea/revanced-patches"
 DEF_INTEGRATIONS_SRC=$(toml_get "$main_config_t" integrations-source) || DEF_INTEGRATIONS_SRC="anddea/revanced-integrations"
 DEF_CLI_SRC=$(toml_get "$main_config_t" cli-source) || DEF_CLI_SRC="j-hc/revanced-cli"
@@ -80,9 +81,10 @@ for table_name in $(toml_get_table_names); do
      integrations_ver=$(toml_get "$t" integrations-version) || integrations_ver=$DEF_INTEGRATIONS_VER
      cli_src=$(toml_get "$t" cli-source) || cli_src=$DEF_CLI_SRC
      cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
+     prerelease=$(toml_get "$t" prerelease) || prerelease=$DEF_PRERELEASE
 
      if ! set_prebuilts "$integrations_src" "$patches_src" "$cli_src" "$integrations_ver" "$patches_ver" "$cli_ver"; then
-          if ! RVP="$(get_rv_prebuilts "$integrations_src" "$patches_src" "$integrations_ver" "$patches_ver" "$cli_src" "$cli_ver")"; then
+          if ! RVP="$(get_rv_prebuilts "$integrations_src" "$patches_src" "$integrations_ver" "$patches_ver" "$cli_src" "$cli_ver" "$prerelease")"; then
                abort "could not download rv prebuilts"
           fi
           read -r rv_cli_jar rv_integrations_apk rv_patches_jar rv_patches_json <<<"$RVP"

@@ -16,14 +16,14 @@
   }, {
     "patchName" : "Overlay buttons",
     "options" : [ {
-      "key" : "OutlineIcon",
-      "value" : false
+      "key" : "IconType",
+      "value" : "rounded"
     } ]
   }, {
-    "patchName" : "Extended icon",
+    "patchName" : "Visual preferences icon",
     "options" : [ {
       "key" : "ExtendedIcon",
-      "value" : "revanced_colored"
+      "value" : "gear"
     } ]    
   }, {
     "patchName" : "Force snackbar theme",
@@ -38,9 +38,9 @@
       "value" : "None"
     } ]    
   }, {
-    "patchName" : "SponsorBlock",
+    "patchName" : "Custom branding icon YouTube",
     "options" : [ {
-      "key" : "OutlineIcon",
-      "value" : false
+      "key" : "AppIcon",
+      "value" : "afn_blue"
     } ]
   } ]
