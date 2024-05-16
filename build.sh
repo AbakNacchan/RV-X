@@ -82,10 +82,10 @@ for table_name in $(toml_get_table_names); do
      cli_ver=$(toml_get "$t" cli-version) || cli_ver=$DEF_CLI_VER
 
      if ! set_prebuilts "$integrations_src" "$patches_src" "$cli_src" "$integrations_ver" "$patches_ver" "$cli_ver"; then
-          if ! RV-XP="$(get_rv_prebuilts "$integrations_src" "$patches_src" "$integrations_ver" "$patches_ver" "$cli_src" "$cli_ver")"; then
+          if ! RVP="$(get_rv_prebuilts "$integrations_src" "$patches_src" "$integrations_ver" "$patches_ver" "$cli_src" "$cli_ver")"; then
                abort "could not download rv prebuilts"
           fi
-          read -r rv_cli_jar rv_integrations_apk rv_patches_jar rv_patches_json <<<"$RV-XP"
+          read -r rv_cli_jar rv_integrations_apk rv_patches_jar rv_patches_json <<<"$RVP"
           app_args[cli]=$rv_cli_jar
           app_args[integ]=$rv_integrations_apk
           app_args[ptjar]=$rv_patches_jar
@@ -101,7 +101,7 @@ for table_name in $(toml_get_table_names); do
 		fi
 	fi
 	if [ "${app_args[riplib]}" = "true" ] && [ "$(toml_get "$t" riplib)" = "false" ]; then app_args[riplib]=false; fi
-     app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]="$DEF_RV-X_BRAND"
+     app_args[rv_brand]=$(toml_get "$t" rv-brand) || app_args[rv_brand]="$DEF_RV_BRAND"
 
      app_args[excluded_patches]=$(toml_get "$t" excluded-patches) || app_args[excluded_patches]=""
      if [ -n "${app_args[excluded_patches]}" ] && [[ "${app_args[excluded_patches]}" != *'"'* ]]; then abort "patch names inside excluded-patches must be quoted"; fi
