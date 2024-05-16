@@ -25,7 +25,7 @@ DEF_CLI_VER=$(toml_get "$main_config_t" cli-version) || DEF_CLI_VER=""
 DEF_PATCHES_SRC=$(toml_get "$main_config_t" patches-source) || DEF_PATCHES_SRC="anddea/revanced-patches"
 DEF_INTEGRATIONS_SRC=$(toml_get "$main_config_t" integrations-source) || DEF_INTEGRATIONS_SRC="anddea/revanced-integrations"
 DEF_CLI_SRC=$(toml_get "$main_config_t" cli-source) || DEF_CLI_SRC="j-hc/revanced-cli"
-DEF_RV-X_BRAND=$(toml_get "$main_config_t" rv-brand) || DEF_RV-X_BRAND="RV-X"
+DEF_RV_BRAND=$(toml_get "$main_config_t" rv-brand) || DEF_RV_BRAND="RV-X"
 mkdir -p $TEMP_DIR $BUILD_DIR
 
 if [ "${2:-}" = "--config-update" ]; then
