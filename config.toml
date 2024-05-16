@@ -1,6 +1,6 @@
 enable-magisk-update = true
-patches-version = "v2.225.0-dev.11"
-integrations-version = "v0.152.0-dev.7"
+patches-version = "v2.225.0-dev.12"
+integrations-version = "v0.152.0-dev.8"
 
 [YouTube]
 app-name = "YouTube"
