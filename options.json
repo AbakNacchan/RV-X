@@ -32,7 +32,7 @@
       "value" : "4.0dip"
     }, {
       "key" : "BackgroundColor",
-      "value" : "Base"
+      "value" : "?ytBaseBackground"
     }, {
       "key" : "StrokeColor",
       "value" : "None"
