@@ -1,7 +1,6 @@
 enable-magisk-update = true
-prerelease: true
-# patches-version = "v2.225.0-dev.13"
-# integrations-version = "v0.152.0-dev.8"
+patches-version = "v2.225.0-dev.14"
+integrations-version = "v0.152.0-dev.8"
 
 [YouTube]
 app-name = "YouTube"
