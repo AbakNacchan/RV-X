@@ -5,7 +5,7 @@ integrations-version = "v0.152.0-dev.8"
 [YouTube]
 app-name = "YouTube"
 build-mode = "both"
-included-patches = "'Hide double tap overlay filter' 'Hide player button background' 'MaterialYou'"
+included-patches = "'Custom branding icon YouTube' 'Force hide player buttons background' 'MaterialYou'"
 excluded-patches = "'Custom branding name YouTube'"
 version = "19.16.39"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
