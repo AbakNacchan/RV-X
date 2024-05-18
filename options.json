@@ -20,11 +20,17 @@
       "value" : "rounded"
     } ]
   }, {
-    "patchName" : "Visual preferences icon",
-    "options" : [ {
-      "key" : "ExtendedIcon",
-      "value" : "gear"
-    } ]    
+    "patchName": "Shorts overlay buttons",
+    "options": [ {
+        "key": "IconType",
+        "value": "outlinecircle"
+      } ]
+  }, {
+    "patchName": "Visual preferences icons",
+    "options": [ {
+        "key": "ExtendedIcon",
+        "value": "revanced_colored"
+      } ]
   }, {
     "patchName" : "Force snackbar theme",
     "options" : [ {
