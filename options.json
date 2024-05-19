@@ -5,6 +5,12 @@
       "value" : "3, 5, 10, 15, 20, 30, 60, 120, 180"
     } ]
   }, {
+    "patchName" : "Selected RVX languages",
+    "options" : [ {
+      "key" : "SelectedLanguages",
+      "value" : "ar, id-rID, ja-rJP"
+    } ]
+  }, {
     "patchName" : "Theme",
     "options" : [ {
       "key" : "DarkThemeBackgroundColor",
