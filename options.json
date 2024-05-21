@@ -30,13 +30,13 @@
     "options": [ {
         "key": "IconType",
         "value": "outlinecircle"
-      } ]
+    } ]
   }, {
     "patchName": "Visual preferences icons",
     "options": [ {
         "key": "ExtendedIcon",
         "value": "revanced_colored"
-      } ]
+    } ]
   }, {
     "patchName" : "Force snackbar theme",
     "options" : [ {
@@ -48,7 +48,7 @@
     }, {
       "key" : "StrokeColor",
       "value" : "None"
-    } ]    
+    } ]   
   }, {
     "patchName" : "Custom branding icon YouTube",
     "options" : [ {
