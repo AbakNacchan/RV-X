@@ -14,7 +14,6 @@ CUSTOMIZE_SH=$(cat scripts/customize.sh)
 UNINSTALL_SH=$(cat scripts/uninstall.sh)
 
 # -------------------- json/toml --------------------
-json_get() { grep -o "\"${1}\":[^\"]*\"[^\"]*\"" | sed -E 's/".*".*"(.*)"/\1/'; }
 toml_prep() { __TOML__=$(tr -d '\t\r' <<<"$1" | tr "'" '"' | grep -o '^[^#]*' | grep -v '^$' | sed -r 's/(\".*\")|\s*/\1/g; 1i []'); }
 toml_get_table_names() {
    local tn
@@ -42,52 +41,49 @@ abort() {
 }
 
 get_rv_prebuilts() {
-   local integrations_src=$1 patches_src=$2 integrations_ver=$3 patches_ver=$4 cli_src=$5 cli_ver=$6
-   local patches_dir=${patches_src%/*}
-   patches_dir=${TEMP_DIR}/${patches_dir,,}-rv
-   local integrations_dir=${integrations_src%/*}
-   integrations_dir=${TEMP_DIR}/${integrations_dir,,}-rv
-   local cli_dir=${cli_src%/*}
-   cli_dir=${TEMP_DIR}/${cli_dir,,}-rv
-   mkdir -p "$patches_dir" "$integrations_dir" "$cli_dir"
-
+   local cli_src=$1 cli_ver=$2 integrations_src=$3 integrations_ver=$4 patches_src=$5 patches_ver=$6
    pr "Getting prebuilts (${patches_src%/*})" >&2
-   local rv_cli_url rv_integrations_url rv_patches rv_patches_dl rv_patches_url rv_patches_json
+   local cl_dir=${patches_src%/*}
+   cl_dir=${TEMP_DIR}/${cl_dir,,}-rv
+   [ -d "$cl_dir" ] || mkdir "$cl_dir"
+   for src_ver in "$cli_src CLI $cli_ver" "$integrations_src Integrations $integrations_ver" "$patches_src Patches $patches_ver"; do
+      set -- $src_ver
+      local src=$1 tag=$2 ver=${3-} ext
+      if [ "$tag" = "CLI" ] || [ "$tag" = "Patches" ]; then
+         ext="jar"
+      elif [ "$tag" = "Integrations" ]; then
+         ext="apk"
+      else abort unreachable; fi
+      local dir=${src%/*}
+      dir=${TEMP_DIR}/${dir,,}-rv
+      [ -d "$dir" ] || mkdir "$dir"
 
-   local rv_cli_rel="https://api.github.com/repos/${cli_src}/releases/"
-   if [ "$cli_ver" ]; then rv_cli_rel+="tags/${cli_ver}"; else rv_cli_rel+="latest"; fi
-   local rv_integrations_rel="https://api.github.com/repos/${integrations_src}/releases/"
-   if [ "$integrations_ver" ]; then rv_integrations_rel+="tags/${integrations_ver}"; else rv_integrations_rel+="latest"; fi
-   local rv_patches_rel="https://api.github.com/repos/${patches_src}/releases/"
-   if [ "$patches_ver" ]; then rv_patches_rel+="tags/${patches_ver}"; else rv_patches_rel+="latest"; fi
-   rv_cli_url=$(gh_req "$rv_cli_rel" - | json_get 'browser_download_url' | grep -E '\.jar$') || return 1
-   local rv_cli_jar="${cli_dir}/${rv_cli_url##*/}"
-   echo "CLI: $(cut -d/ -f4 <<<"$rv_cli_url")/$(cut -d/ -f9 <<<"$rv_cli_url")  " >"$patches_dir/changelog.md"
+      local rv_rel="https://api.github.com/repos/${src}/releases/"
+      if [ "$ver" ]; then rv_rel+="tags/${ver}"; else rv_rel+="latest"; fi
 
-   rv_integrations_url=$(gh_req "$rv_integrations_rel" - | json_get 'browser_download_url' | grep -E '\.apk$') || return 1
-   local rv_integrations_apk="${integrations_dir}/${rv_integrations_url##*/}"
-   echo "Integrations: $(cut -d/ -f4 <<<"$rv_integrations_url")/$(cut -d/ -f9 <<<"$rv_integrations_url")  " >>"$patches_dir/changelog.md"
+      local resp asset url name file
+      resp=$(gh_req "$rv_rel" -) || return 1
+      asset=$(jq -e -r ".assets[] | select(.name | endswith(\"$ext\"))" <<<"$resp") || return 1
+      url=$(jq -r .url <<<"$asset")
+      name=$(jq -r .name <<<"$asset")
+      file="${dir}/${name}"
+      [ -f "$file" ] || REBUILD=true
 
-   rv_patches=$(gh_req "$rv_patches_rel" -) || return 1
-   # rv_patches_changelog=$(json_get 'body' <<<"$rv_patches" | sed 's/\(\\n\)\+/\\n/g')
-   rv_patches_dl=$(json_get 'browser_download_url' <<<"$rv_patches")
-   rv_patches_json="${patches_dir}/patches-$(json_get 'tag_name' <<<"$rv_patches").json"
-   rv_patches_url=$(grep -E '\.jar$' <<<"$rv_patches_dl")
-   local rv_patches_jar="${patches_dir}/${rv_patches_url##*/}"
-   [ -f "$rv_patches_jar" ] || REBUILD=true
-   local nm
-   nm=$(cut -d/ -f9 <<<"$rv_patches_url")
-   echo "Patches: $(cut -d/ -f4 <<<"$rv_patches_url")/$nm  " >>"$patches_dir/changelog.md"
-   # shellcheck disable=SC2001
-   echo -e "[Changelog](https://github.com/${patches_src}/releases/tag/v$(sed 's/.*-\(.*\)\..*/\1/' <<<"$nm"))\n" >>"$patches_dir/changelog.md"
-   # echo -e "\n${rv_patches_changelog//# [/### [}\n---" >>"$patches_dir/changelog.md"
-
-   dl_if_dne "$rv_cli_jar" "$rv_cli_url" >&2 || return 1
-   dl_if_dne "$rv_integrations_apk" "$rv_integrations_url" >&2 || return 1
-   dl_if_dne "$rv_patches_jar" "$rv_patches_url" >&2 || return 1
-   dl_if_dne "$rv_patches_json" "$(grep 'json' <<<"$rv_patches_dl")" >&2 || return 1
-
-   echo "$rv_cli_jar" "$rv_integrations_apk" "$rv_patches_jar" "$rv_patches_json"
+      echo "$tag: $(cut -d/ -f5 <<<"$url")/${name}  " >>"${cl_dir}/changelog.md"
+      gh_dl "$file" "$url" >&2 || return 1
+      echo -n "$file "
+      if [ "$tag" = "Patches" ]; then
+         local tag_name
+         tag_name=$(jq -r '.tag_name' <<<"$resp")
+         name="patches-${tag_name}.json"
+         file="${dir}/${name}"
+         url=$(jq -e -r '.assets[] | select(.name | endswith("json")) | .url' <<<"$resp") || return 1
+         gh_dl "$file" "$url" >&2 || return 1
+         echo -n "$file "
+         echo -e "[Changelog](https://github.com/${src}/releases/tag/${tag_name})\n" >>"${cl_dir}/changelog.md"
+      fi
+   done
+   echo
 }
 
 get_prebuilts() {
@@ -121,6 +117,7 @@ get_prebuilts() {
 }
 
 config_update() {
+   if [ ! -f build.md ]; then abort "build.md not available"; fi
    declare -A sources
    : >$TEMP_DIR/skipped
    local conf=""
@@ -144,7 +141,6 @@ config_update() {
          if ! last_patches_url=$(gh_req "https://api.github.com/repos/${PATCHES_SRC}/releases/latest" - 2>&1 | json_get 'browser_download_url' | grep -E '\.jar$'); then
             abort oops
          fi
-         last_patches=${last_patches_url##*/}
          cur_patches=$(sed -n "s/.*Patches: ${PATCHES_SRC%%/*}\/\(.*\)/\1/p" build.md | xargs)
          if [ "$cur_patches" ] && [ "$last_patches" ]; then
             if [ "${cur_patches}" != "$last_patches" ]; then
