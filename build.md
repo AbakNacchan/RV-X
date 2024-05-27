@@ -1,5 +1,5 @@
-YouTube: 19.20.34  
 Music: 7.02.51  
+YouTube: 19.20.34  
 - To use RV-X without root, install [MicroG-RE](https://github.com/WSTxda/MicroG-RE/releases/latest).  
 - To detach RV-X from Play Store, use [zygisk-detach](https://github.com/j-hc/zygisk-detach) module.  
 
