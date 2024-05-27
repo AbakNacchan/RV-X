@@ -7,7 +7,7 @@
   }, {
     "patchName" : "Selected RVX languages",
     "options" : [ {
-      "key" : "SelectedLanguages",
+      "key" : "SelectedAppLanguages",
       "value" : "ar, id-rID, ja-rJP"
     } ]
   }, {
