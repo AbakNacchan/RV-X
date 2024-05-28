@@ -1,12 +1,12 @@
-MusicBeta: 7.02.51  
-YouTubeBeta: 19.20.34  
+YouTube: 19.20.34  
+Music: 7.02.51  
 - To use RV-X without root, install [MicroG-RE](https://github.com/WSTxda/MicroG-RE/releases/latest).  
 - To detach RV-X from Play Store, use [zygisk-detach](https://github.com/j-hc/zygisk-detach) module.  
 
 Changelog:  
 CLI: inotia00/revanced-cli-4.6.1-all.jar  
-Integrations: inotia00/revanced-integrations-1.9.3.apk  
-Patches: inotia00/revanced-patches-4.8.5.jar  
-[Changelog](https://github.com/inotia00/revanced-patches/releases/tag/v4.8.5)  
+Integrations: anddea/revanced-integrations-0.152.0-dev.14.apk  
+Patches: anddea/revanced-patches-2.225.0-dev.24.jar  
+[Changelog](https://github.com/anddea/revanced-patches/releases/tag/vdev.24)  
   
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W8VRK0S)  
