@@ -1,4 +1,4 @@
-enable-magisk-update = true
+enable-magisk-update = false
 
 [YouTube Beta]
 app-name = "YouTube"
