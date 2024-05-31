@@ -5,10 +5,10 @@ enable-magisk-update = true
 
 [YouTube]
 app-name = "YouTube"
-build-mode = "both"
+build-mode = "module"
 included-patches = "'Custom branding icon YouTube' 'Force hide player buttons background' 'Hide animated button background' 'Hide shorts dimming' 'MaterialYou'"
 excluded-patches = "'Custom package name' 'Enable debug logging'"
-version = "latest"
+version = "beta"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 arch = "arm64-v8a"
 apkmirror-arch = "arm64-v8a"
