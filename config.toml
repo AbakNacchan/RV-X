@@ -16,7 +16,7 @@ apkmirror-arch = "arm64-v8a"
 [Music]
 # enabled = false
 build-mode = "both"
-version = "7.03.52"
+version = "7.03.53"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 apkmirror-arch = "arm64-v8a"
 included-patches = "'Hide overlay filter' 'Hide player overlay filter'"
