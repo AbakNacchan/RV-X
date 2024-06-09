@@ -1,4 +1,4 @@
-name: Build Modules
+name: Build RV-X
 on:
   workflow_call:
     inputs:
