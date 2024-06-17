@@ -4,8 +4,6 @@ Adding another RV-X app is as easy as this:
 ```toml
 [App Name]
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
-# or uptodown-dlurl = "https://app.en.uptodown.com/android"
-# or apkmonk-dlurl = "https://www.apkmonk.com/app/com.app.app/"
 ```
 
 ## More about other options:
@@ -55,7 +53,6 @@ exclusive-patches = false
 # Exclude all patches by default ― default: false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
 uptodown-dlurl = "https://app.en.uptodown.com/android"
-apkmonk-dlurl = "https://www.apkmonk.com/app/com.app.app/"
 module-prop-name = "app-magisk"
 # Magisk module prop name.
 apkmirror-dpi = "360-480dpi"

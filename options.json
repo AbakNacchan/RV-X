@@ -53,6 +53,6 @@
     "patchName" : "Custom branding icon YouTube",
     "options" : [ {
       "key" : "AppIcon",
-      "value" : "mmt"
+      "value" : "mmt_blue"
     } ]
 } ]

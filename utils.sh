@@ -282,36 +282,6 @@ get_apkmirror_resp() {
 }
 # --------------------------------------------------
 
-# -------------------- uptodown --------------------
-get_uptodown_resp() {
-   __UPTODOWN_RESP__=$(req "${1}/versions" -)
-   __UPTODOWN_RESP_PKG__=$(req "${1}/download" -)
-}
-get_uptodown_vers() { $HTMLQ --text ".version" <<<"$__UPTODOWN_RESP__"; }
-dl_uptodown() {
-   local uptodown_dlurl=$1 version=$2 output=$3
-   local url
-   url=$(grep -F "${version}</span>" -B 2 <<<"$__UPTODOWN_RESP__" | head -1 | sed -n 's;.*data-url=".*download\/\(.*\)".*;\1;p') || return 1
-   url="https://dw.uptodown.com/dwn/$(req "${uptodown_dlurl}/post-download/${url}" - | sed -n 's;.*class="post-download" data-url="\(.*\)".*;\1;p')" || return 1
-   req "$url" "$output"
-}
-get_uptodown_pkg_name() { $HTMLQ --text "tr.full:nth-child(1) > td:nth-child(3)" <<<"$__UPTODOWN_RESP_PKG__"; }
-# --------------------------------------------------
-
-# -------------------- apkmonk ---------------------
-get_apkmonk_resp() {
-   __APKMONK_RESP__=$(req "${1}" -)
-   __APKMONK_PKG_NAME__=$(awk -F/ '{print $NF}' <<<"$1")
-}
-get_apkmonk_vers() { grep -oP 'download_ver.+?>\K([0-9,\.]*)' <<<"$__APKMONK_RESP__"; }
-dl_apkmonk() {
-   local url=$1 version=$2 output=$3
-   url="https://www.apkmonk.com/down_file?pkg="$(grep -F "$version</a>" <<<"$__APKMONK_RESP__" | grep -oP 'href=\"/download-app/\K.+?(?=/?\">)' | sed 's;/;\&key=;') || return 1
-   url=$(req "$url" - | grep -oP 'https.+?(?=\",)') || return 1
-   req "$url" "$output"
-}
-get_apkmonk_pkg_name() { echo "$__APKMONK_PKG_NAME__"; }
-# --------------------------------------------------
 dl_archive() {
    local url=$1 version=$2 output=$3 arch=$4
    local path version=${version// /}
@@ -354,7 +324,7 @@ build_rv() {
    p_patcher_args+=("$(join_args "${args[excluded_patches]}" -e) $(join_args "${args[included_patches]}" -i)")
    [ "${args[exclusive_patches]}" = true ] && p_patcher_args+=("--exclusive")
 
-   for dl_p in archive apkmirror uptodown apkmonk; do
+   for dl_p in archive apkmirror; do
       if [ -z "${args[${dl_p}_dlurl]}" ]; then continue; fi
       if ! get_"${dl_p}"_resp "${args[${dl_p}_dlurl]}" || ! pkg_name=$(get_"${dl_p}"_pkg_name); then
          args[${dl_p}_dlurl]=""
