@@ -18,8 +18,8 @@ patches-source = "anddea/revanced-patches"
 # Where to fetch patches bundle from ― default: "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
 # Where to fetch integrations from ― default: "anddea/revanced-integrations"
-cli-source = "j-hc/revanced-cli"
-# Where to fetch cli from ― default: "j-hc/revanced-cli"
+cli-source = "inotia00/revanced-cli"
+# Where to fetch cli from ― default: "inotia00/revanced-cli"
 # options like cli-source can also set per app
 rv-brand = "RV-X"
 # Rebrand from 'RV-X' to something different ― default: "RV-X"
@@ -52,7 +52,6 @@ included-patches = "'Some Patch' 'Some Other Patch'"
 exclusive-patches = false
 # Exclude all patches by default ― default: false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
-uptodown-dlurl = "https://app.en.uptodown.com/android"
 module-prop-name = "app-magisk"
 # Magisk module prop name.
 apkmirror-dpi = "360-480dpi"
