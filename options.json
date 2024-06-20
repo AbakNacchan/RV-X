@@ -3,9 +3,6 @@
     "options" : [ {
         "key": "CustomName",
         "value": "ReVanced eXtended"
-    }, {
-        "key": "InsertPosition",
-        "value": "Account"
     } ]
   }, {
     "patchName" : "Custom double tap length",
@@ -65,7 +62,7 @@
       "value" : "mmt_blue"
     }, {
         "key": "ChangeSplashIcon",
-        "value": "true"
+        "value": true
     } ]
   }, {
     "patchName": "Custom branding icon YouTube Music",
@@ -74,6 +71,6 @@
         "value": "mmt"
     }, {
         "key": "ChangeSplashIcon",
-        "value": "true"
+        "value": true
     } ]
 } ]
