@@ -63,17 +63,11 @@
     "options" : [ {
       "key" : "AppIcon",
       "value" : "mmt_blue"
-    }, {
-        "key": "ChangeSplashIcon",
-        "value": "mmt_blue"
     } ]
   }, {
     "patchName": "Custom branding icon YouTube Music",
     "options" : [ {
         "key": "AppIcon",
-        "value": "mmt"
-    }, {
-        "key": "ChangeSplashIcon",
         "value": "mmt"
     } ]
 } ]
