@@ -1,6 +1,6 @@
 enable-magisk-update = true
-patches-version = "v2.226.0-dev.14"
-integrations-version = "v0.153.0-dev.6"
+patches-version = "v2.226.0-dev.15"
+integrations-version = "v0.153.0-dev.7"
 
 
 [YouTube]

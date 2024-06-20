@@ -1,4 +1,13 @@
 [ {
+    "patchName": "Settings for YouTube",
+    "options" : [ {
+        "key": "CustomName",
+        "value": "ReVanced eXtended"
+    }, {
+        "key": "InsertPosition",
+        "value": "Account"
+    } ]
+  }, {
     "patchName" : "Custom double tap length",
     "options" : [ {
       "key" : "DoubleTapLengthArrays",
@@ -8,7 +17,7 @@
     "patchName" : "Selected RVX languages",
     "options" : [ {
       "key" : "SelectedAppLanguages",
-      "value" : "ar, id-rID, ja-rJP, ko-rKR, de-rDE"
+      "value" : "ar, id-rID, ja-rJP, ko-rKR"
     } ]
   }, {
     "patchName" : "Theme",
@@ -54,5 +63,17 @@
     "options" : [ {
       "key" : "AppIcon",
       "value" : "mmt_blue"
+    }, {
+        "key": "ChangeSplashIcon",
+        "value": "mmt_blue"
+    } ]
+  }, {
+    "patchName": "Custom branding icon YouTube Music",
+    "options" : [ {
+        "key": "AppIcon",
+        "value": "mmt"
+    }, {
+        "key": "ChangeSplashIcon",
+        "value": "mmt"
     } ]
 } ]
