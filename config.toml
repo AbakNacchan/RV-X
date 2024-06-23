@@ -1,6 +1,6 @@
 enable-magisk-update = true
-patches-version = "v4.9.2-dev.2"
-integrations-version = "v1.10.2-dev.2"
+# patches-version = "v4.9.2-dev.2"
+# integrations-version = "v1.10.2-dev.2"
 
 [YouTube Beta]
 build-mode = "both"
