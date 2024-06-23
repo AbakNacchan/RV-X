@@ -1,7 +1,13 @@
 [ {
     "patchName": "Settings for YouTube",
     "options" : [ {
-        "key": "CustomName",
+        "key": "RVXSettingsMenuName",
+        "value": "ReVanced eXtended"
+    } ]
+  }, {
+    "patchName": "Settings for YouTube Music",
+    "options" : [ {
+        "key": "RVXSettingsMenuName",
         "value": "ReVanced eXtended"
     } ]
   }, {
@@ -11,7 +17,7 @@
       "value" : "3, 5, 10, 15, 20, 30, 60, 120, 180"
     } ]
   }, {
-    "patchName" : "Selected RVX languages",
+    "patchName" : "Translations",
     "options" : [ {
       "key" : "SelectedAppLanguages",
       "value" : "ar, id-rID, ja-rJP, ko-rKR"

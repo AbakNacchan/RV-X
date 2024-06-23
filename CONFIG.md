@@ -33,14 +33,14 @@ cli-version = "v3.0.1"
 
 [App Name]
 app-name = "App"
-# If set, release name becomes App instead of Some-App ― default is same as table name, which is 'App'
+# If set, release name becomes 'App' instead of 'App Name' ― default is same as table name, which is 'App Name'
 enabled = true
 # Whether to build the app ― default: true
 version = "auto"
 # 'auto', 'latest', 'beta' or a custom one e.g. '17.45.36' ― default: auto
-# 'auto' option gets the latest possible version supported by all the included patches
-# 'latest' gets the latest stable without checking patches support
-# 'beta' gets the latest beta/alpha
+# 'auto' option will get you the latest possible version supported by the sources
+# 'latest' will get you the latest stable version without checking sources support
+# 'beta' is similar as 'latest', but in beta version
 include-stock = true
 # includes stock apk in the module, default: true
 build-mode = "apk"
