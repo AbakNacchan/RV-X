@@ -14,10 +14,10 @@ There is existing example below with all defaults shown and all the keys explici
 ```toml
 parallel-jobs = 1
 # Amount of cores to use for parallel patching, if not set nproc is used
-patches-source = "anddea/revanced-patches"
-# Where to fetch patches bundle from ― default: "anddea/revanced-patches"
-integrations-source = "anddea/revanced-integrations"
-# Where to fetch integrations from ― default: "anddea/revanced-integrations"
+patches-source = "inotia00/revanced-patches"
+# Where to fetch patches bundle from ― default: "inotia00/revanced-patches"
+integrations-source = "inotia00/revanced-integrations"
+# Where to fetch integrations from ― default: "inotia00/revanced-integrations"
 cli-source = "inotia00/revanced-cli"
 # Where to fetch cli from ― default: "inotia00/revanced-cli"
 # options like cli-source can also set per app
