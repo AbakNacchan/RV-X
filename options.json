@@ -38,7 +38,7 @@
         "value": "mmt"
     }, {
         "key": "ChangeSplashIcon",
-        "value": "true"
+        "value": true
     } ]
   }, {
     "patchName": "Settings for YouTube",
@@ -53,7 +53,7 @@
         "value": "mmt"
     }, {
         "key": "ChangeSplashIcon",
-        "value": "true"
+        "value": true
     } ]
   }, {
     "patchName": "Settings for YouTube Music",
