@@ -1,7 +1,13 @@
 [ {
     "patchName": "Settings for YouTube",
     "options" : [ {
-        "key": "RVXSettingsMenuName",
+        "key": "CustomName",
+        "value": "ReVanced eXtended"
+    } ]
+  }, {
+    "patchName": "Settings for YouTube Music",
+    "options" : [ {
+        "key": "CustomName",
         "value": "ReVanced eXtended"
     } ]
   }, {
