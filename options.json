@@ -5,12 +5,6 @@
         "value": "ReVanced eXtended"
     } ]
   }, {
-    "patchName": "Settings for YouTube Music",
-    "options" : [ {
-        "key": "RVXSettingsMenuName",
-        "value": "ReVanced eXtended"
-    } ]
-  }, {
     "patchName" : "Custom double tap length",
     "options" : [ {
       "key" : "DoubleTapLengthArrays",
