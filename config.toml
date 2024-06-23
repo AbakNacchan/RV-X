@@ -3,7 +3,6 @@ patches-version = "v4.9.2-dev.2"
 integrations-version = "v1.10.2-dev.2"
 
 [YouTube Beta]
-app-name = "YouTube"
 build-mode = "both"
 included-patches = "'Force hide player buttons background' 'Hide Shorts dimming' 'Hide animated button background' 'Hide double tap overlay filter' 'MaterialYou' 'Visual preferences icons'"
 excluded-patches = "'Custom branding name for YouTube' 'Custom package name' 'Disable splash animation' 'Enable debug logging' 'Translations for YouTube'"
