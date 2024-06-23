@@ -4,8 +4,6 @@ Adding another RV-X app is as easy as this:
 ```toml
 [App Name]
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
-# or uptodown-dlurl = "https://app.en.uptodown.com/android"
-# or apkmonk-dlurl = "https://www.apkmonk.com/app/com.app.app/"
 ```
 
 ## More about other options:
@@ -20,8 +18,8 @@ patches-source = "anddea/revanced-patches"
 # Where to fetch patches bundle from ― default: "anddea/revanced-patches"
 integrations-source = "anddea/revanced-integrations"
 # Where to fetch integrations from ― default: "anddea/revanced-integrations"
-cli-source = "j-hc/revanced-cli"
-# Where to fetch cli from ― default: "j-hc/revanced-cli"
+cli-source = "inotia00/revanced-cli"
+# Where to fetch cli from ― default: "inotia00/revanced-cli"
 # options like cli-source can also set per app
 rv-brand = "RV-X"
 # Rebrand from 'RV-X' to something different ― default: "RV-X"
@@ -35,14 +33,14 @@ cli-version = "v3.0.1"
 
 [App Name]
 app-name = "App"
-# If set, release name becomes App instead of Some-App ― default is same as table name, which is 'App'
+# If set, release name becomes 'App' instead of 'App Name' ― default is same as table name, which is 'App Name'
 enabled = true
 # Whether to build the app ― default: true
 version = "auto"
 # 'auto', 'latest', 'beta' or a custom one e.g. '17.45.36' ― default: auto
-# 'auto' option gets the latest possible version supported by all the included patches
-# 'latest' gets the latest stable without checking patches support
-# 'beta' gets the latest beta/alpha
+# 'auto' option will get you the latest possible version supported by the sources
+# 'latest' will get you the latest stable version without checking sources support
+# 'beta' is similar as 'latest', but in beta version
 include-stock = true
 # includes stock apk in the module, default: true
 build-mode = "apk"
@@ -54,8 +52,6 @@ included-patches = "'Some Patch' 'Some Other Patch'"
 exclusive-patches = false
 # Exclude all patches by default ― default: false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/inc/app"
-uptodown-dlurl = "https://app.en.uptodown.com/android"
-apkmonk-dlurl = "https://www.apkmonk.com/app/com.app.app/"
 module-prop-name = "app-magisk"
 # Magisk module prop name.
 apkmirror-dpi = "360-480dpi"
