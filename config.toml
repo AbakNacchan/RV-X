@@ -6,12 +6,13 @@ enable-magisk-update = true
 build-mode = "both"
 included-patches = "'Force hide player buttons background' 'Hide Shorts dimming' 'Hide animated button background' 'Hide double tap overlay filter' 'MaterialYou' 'Visual preferences icons'"
 excluded-patches = "'Custom branding name for YouTube' 'Custom package name' 'Disable splash animation' 'Enable debug logging' 'Translations for YouTube'"
-version = "auto"
+version = "latest"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 arch = "arm64-v8a"
 apkmirror-arch = "arm64-v8a"
 
 [Music Beta]
+enable = false
 build-mode = "both"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
