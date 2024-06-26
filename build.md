@@ -5,8 +5,8 @@ YouTube: 19.23.40
 
 Changelog:  
 CLI: inotia00/revanced-cli-4.6.1-all.jar  
-Integrations: anddea/revanced-integrations-0.153.0-dev.10.apk  
-Patches: anddea/revanced-patches-2.226.0-dev.20.jar  
-[Changelog](https://github.com/anddea/revanced-patches/releases/tag/vdev.20)  
+Integrations: anddea/revanced-integrations-0.153.0.apk  
+Patches: anddea/revanced-patches-2.226.0.jar  
+[Changelog](https://github.com/anddea/revanced-patches/releases/tag/v2.226.0)  
   
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W8VRK0S)  
