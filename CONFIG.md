@@ -45,9 +45,9 @@ include-stock = true
 # includes stock apk in the module, default: true
 build-mode = "apk"
 # 'both', 'apk' or 'module' ― default: apk
-excluded-patches = "'Some Patch' 'Some Other Patch'"
+excluded-patches = "'Patches' 'Any Other Patches'"
 # Whitespace separated list of patches to exclude
-included-patches = "'Some Patch' 'Some Other Patch'"
+included-patches = "'Patches' 'Any Other Patches'"
 # Whitespace separated list of patches to include, all default patches are included by default
 exclusive-patches = false
 # Exclude all patches by default ― default: false
