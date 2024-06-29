@@ -41,7 +41,7 @@
     "patchName": "Shorts overlay buttons",
     "options": [ {
         "key": "IconType",
-        "value": "outlinecircle"
+        "value": "originaloutline"
     } ]
   }, {
     "patchName": "Visual preferences icons",
@@ -59,7 +59,7 @@
       "value" : "?ytBaseBackground"
     }, {
       "key" : "StrokeColor",
-      "value" : "None"
+      "value" : "?attr/colorAccent"
     } ]   
   }, {
     "patchName" : "Custom branding icon YouTube",
