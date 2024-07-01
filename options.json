@@ -1,4 +1,10 @@
 [ {
+    "patchName": "Custom Shorts action buttons",
+    "options" : [ {
+        "key": "IconType",
+        "value": "outlinecircle"
+    } ]
+  }, {
     "patchName": "Settings for YouTube",
     "options" : [ {
         "key": "RVXSettingsMenuName",
@@ -36,12 +42,6 @@
     "options" : [ {
       "key" : "IconType",
       "value" : "rounded"
-    } ]
-  }, {
-    "patchName": "Shorts overlay buttons",
-    "options": [ {
-        "key": "IconType",
-        "value": "originaloutline"
     } ]
   }, {
     "patchName": "Visual preferences icons",
