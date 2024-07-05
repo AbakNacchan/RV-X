@@ -60,7 +60,7 @@
     }, {
       "key" : "StrokeColor",
       "value" : "?attr/colorAccent"
-    } ]   
+    } ]
   }, {
     "patchName" : "Custom branding icon YouTube",
     "options" : [ {
