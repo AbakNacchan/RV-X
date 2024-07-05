@@ -46,7 +46,7 @@
   }, {
     "patchName": "Visual preferences icons",
     "options": [ {
-       "key" : "ExtendedIcon",
+      "key" : "ExtendedIcon",
       "value" : "revanced_colored"
     } ]
   }, {
