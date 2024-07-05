@@ -1,20 +1,20 @@
 [ {
     "patchName": "Custom Shorts action buttons",
     "options" : [ {
-        "key": "IconType",
-        "value": "outlinecircle"
+      "key" : "IconType",
+      "value" : "outlinecircle"
     } ]
   }, {
     "patchName": "Settings for YouTube",
     "options" : [ {
-        "key": "RVXSettingsMenuName",
-        "value": "ReVanced eXtended"
+      "key" : "RVXSettingsMenuName",
+      "value" : "ReVanced eXtended"
     } ]
   }, {
     "patchName": "Settings for YouTube Music",
     "options" : [ {
-        "key": "RVXSettingsMenuName",
-        "value": "ReVanced eXtended"
+      "key" : "RVXSettingsMenuName",
+      "value" : "ReVanced eXtended"
     } ]
   }, {
     "patchName" : "Custom double tap length",
@@ -46,8 +46,8 @@
   }, {
     "patchName": "Visual preferences icons",
     "options": [ {
-        "key": "ExtendedIcon",
-        "value": "revanced_colored"
+       "key" : "ExtendedIcon",
+      "value" : "revanced_colored"
     } ]
   }, {
     "patchName" : "Force snackbar theme",
@@ -70,7 +70,7 @@
   }, {
     "patchName": "Custom branding icon YouTube Music",
     "options" : [ {
-        "key": "AppIcon",
-        "value": "mmt_blue"
+      "key" : "AppIcon",
+      "value" : "mmt_blue"
     } ]
 } ]
