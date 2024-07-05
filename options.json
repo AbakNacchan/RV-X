@@ -1,8 +1,32 @@
 [ {
+    "patchName": "Custom Shorts action buttons",
+    "options" : [ {
+        "key": "IconType",
+        "value": "outlinecircle"
+    } ]
+  }, {
+    "patchName": "Settings for YouTube",
+    "options" : [ {
+        "key": "RVXSettingsMenuName",
+        "value": "ReVanced eXtended"
+    } ]
+  }, {
+    "patchName": "Settings for YouTube Music",
+    "options" : [ {
+        "key": "RVXSettingsMenuName",
+        "value": "ReVanced eXtended"
+    } ]
+  }, {
     "patchName" : "Custom double tap length",
     "options" : [ {
       "key" : "DoubleTapLengthArrays",
       "value" : "3, 5, 10, 15, 20, 30, 60, 120, 180"
+    } ]
+  }, {
+    "patchName" : "Translations",
+    "options" : [ {
+      "key" : "SelectedAppLanguages",
+      "value" : "ar, id-rID, ja-rJP, ko-rKR"
     } ]
   }, {
     "patchName" : "Theme",
@@ -20,45 +44,33 @@
       "value" : "rounded"
     } ]
   }, {
-    "patchName": "Shorts overlay buttons",
-    "options": [ {
-        "key": "IconType",
-        "value": "outlinecircle"
-    } ]
-  }, {
     "patchName": "Visual preferences icons",
     "options": [ {
-        "key": "RVXSettingsMenuIcon",
+        "key": "ExtendedIcon",
         "value": "revanced_colored"
     } ]
   }, {
-    "patchName": "Custom branding icon for YouTube",
-    "options": [ {
-        "key": "AppIcon",
-        "value": "mmt"
+    "patchName" : "Force snackbar theme",
+    "options" : [ {
+      "key" : "CornerRadius",
+      "value" : "4.0dip"
     }, {
-        "key": "ChangeSplashIcon",
-        "value": true
-    } ]
-  }, {
-    "patchName": "Settings for YouTube",
-    "options": [ {
-        "key": "RVXSettingsMenuName",
-        "value": "ReVanced eXtended"
-    } ]
-  }, {
-    "patchName": "Custom branding icon for YouTube Music",
-    "options": [ {
-        "key": "AppIcon",
-        "value": "mmt"
+      "key" : "BackgroundColor",
+      "value" : "?ytBaseBackground"
     }, {
-        "key": "ChangeSplashIcon",
-        "value": true
+      "key" : "StrokeColor",
+      "value" : "?attr/colorAccent"
+    } ]   
+  }, {
+    "patchName" : "Custom branding icon YouTube",
+    "options" : [ {
+      "key" : "AppIcon",
+      "value" : "mmt"
     } ]
   }, {
-    "patchName": "Settings for YouTube Music",
-    "options": [ {
-        "key": "RVXSettingsMenuName",
-        "value": "ReVanced eXtended"
+    "patchName": "Custom branding icon YouTube Music",
+    "options" : [ {
+        "key": "AppIcon",
+        "value": "mmt_blue"
     } ]
 } ]
