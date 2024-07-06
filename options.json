@@ -2,7 +2,7 @@
     "patchName": "Custom Shorts action buttons",
     "options" : [ {
       "key" : "IconType",
-      "value" : "outlinecircle"
+      "value" : "originaloutline"
     } ]
   }, {
     "patchName": "Settings for YouTube",
@@ -47,7 +47,7 @@
     "patchName": "Visual preferences icons",
     "options": [ {
       "key" : "ExtendedIcon",
-      "value" : "revanced_colored"
+      "value" : "revanced"
     } ]
   }, {
     "patchName" : "Force snackbar theme",
