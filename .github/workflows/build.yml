@@ -65,17 +65,6 @@ jobs:
         run: |
           echo "DATE=$(date +%Y%m%d)" >> "$GITHUB_OUTPUT"
 
-      - name: Generate Release Hashes
-        uses: MCJack123/ghaction-Generate-Release-Hashes@v4
-        with:
-          hash-type: md5
-          file-name: hashes.txt
-
-      - uses: actions/upload-artifact@v4.3.4
-        with:
-          name: Asset Hashes
-          path: hashes.txt
-
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@2.9.0
         with:
@@ -116,6 +105,16 @@ jobs:
           cd ..
 
           find . -name "*-update.json" | grep . || : >dummy-update.json
+
+      - uses: MCJack123/ghaction-Generate-Release-Hashes@v4
+        with:
+          hash-type: md5
+          file-name: hashes.txt
+
+      - uses: actions/upload-artifact@v4.3.4
+        with:
+          name: Asset Hashes
+          path: hashes.txt
               
       - uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
