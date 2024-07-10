@@ -13,7 +13,7 @@
   }, {
     "patchName": "Custom branding name for YouTube Music",
     "options" : [ {
-     "key" : "AppNameLauncher"
+     "key" : "AppNameLauncher",
       "value" : "RVX Music"
     } ]
   }, {
