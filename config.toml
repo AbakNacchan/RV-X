@@ -5,7 +5,7 @@ integrations-version = "v0.154.0-dev.5"
 
 [YouTube]
 build-mode = "both"
-included-patches = "'Custom branding icon YouTube' 'Force hide player buttons background' 'Hide Shorts dimming' 'MaterialYou'"
+included-patches = "'Custom branding icon for YouTube' 'Custom branding name for YouTube' 'Force hide player buttons background' 'Hide Shorts dimming' 'MaterialYou'"
 excluded-patches = "'Disable splash animation' 'Enable debug logging'"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"

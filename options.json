@@ -7,8 +7,8 @@
   }, {
     "patchName": "Custom branding name YouTube",
     "options" : [ {
-        "key": "AppName",
-        "value": "RVX YouTube"
+     "key" : "AppName",
+      "value" : "RVX YouTube"
     } ]
   }, {
     "patchName": "Custom package name",
