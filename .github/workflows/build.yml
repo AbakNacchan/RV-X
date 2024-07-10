@@ -105,6 +105,17 @@ jobs:
           cd ..
 
           find . -name "*-update.json" | grep . || : >dummy-update.json
+              
+      - name: Generate Release Hashes
+        uses: MCJack123/ghaction-Generate-Release-Hashes@v4
+        with:
+          hash-type: md5
+          file-name: hashes.txt
+
+      - uses: actions/upload-artifact@v4.3.4
+        with:
+          name: Asset Hashes
+          path: hashes.txt
 
       - uses: stefanzweifel/git-auto-commit-action@v5.0.1
         with:
