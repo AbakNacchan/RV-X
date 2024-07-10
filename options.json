@@ -11,6 +11,12 @@
       "value" : "RVX YouTube"
     } ]
   }, {
+    "patchName": "Custom branding name for YouTube Music",
+    "options" : [ {
+     "key" : "AppNameLauncher"
+      "value" : "RVX Music"
+    } ]
+  }, {
     "patchName": "Custom package name",
     "options" : [ {
       "key" : "PackageNameYouTube",
