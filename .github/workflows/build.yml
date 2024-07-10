@@ -65,6 +65,17 @@ jobs:
         run: |
           echo "DATE=$(date +%Y%m%d)" >> "$GITHUB_OUTPUT"
 
+      - name: Generate Release Hashes
+        uses: MCJack123/ghaction-Generate-Release-Hashes@v4
+        with:
+          hash-type: md5
+          file-name: hashes.txt
+
+      - uses: actions/upload-artifact@v4.3.4
+        with:
+          name: Asset Hashes
+          path: hashes.txt
+
       - name: Upload modules to release
         uses: svenstaro/upload-release-action@2.9.0
         with:
@@ -76,17 +87,6 @@ jobs:
           draft: true
           file_glob: true
           overwrite: true
-
-      - name: Generate Release Hashes
-        uses: MCJack123/ghaction-Generate-Release-Hashes@v4
-        with:
-          hash-type: md5
-          file-name: hashes.txt
-
-      - uses: actions/upload-artifact@v4.3.4
-        with:
-          name: Asset Hashes
-          path: hashes.txt
 
       - name: Update changelog and Magisk update json
         id: update_config
