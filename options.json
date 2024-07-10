@@ -5,27 +5,6 @@
       "value" : "originaloutline"
     } ]
   }, {
-    "patchName": "Custom branding name YouTube",
-    "options" : [ {
-     "key" : "AppName",
-      "value" : "RVX YouTube"
-    } ]
-  }, {
-    "patchName": "Custom branding name for YouTube Music",
-    "options" : [ {
-     "key" : "AppNameLauncher",
-      "value" : "RVX Music"
-    } ]
-  }, {
-    "patchName": "Custom package name",
-    "options" : [ {
-      "key" : "PackageNameYouTube",
-      "value" : "rvx.android.youtube"
-    }, {
-      "key" : "PackageNameYouTubeMusic",
-      "value" : "rvx.android.youtube.music"
-    } ]
-  }, {
     "patchName": "Settings for YouTube",
     "options" : [ {
       "key" : "RVXSettingsMenuName",
