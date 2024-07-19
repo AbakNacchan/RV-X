@@ -12,7 +12,7 @@ on:
 jobs:
   run:
     permissions: write-all
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/setup-java@v4.2.1
         with:
