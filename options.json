@@ -17,13 +17,13 @@
       "value" : "RVX Music"
     } ]
   }, {
-    "patchName": "Custom package name",
+    "patchName": "GmsCore support",
     "options" : [ {
       "key" : "PackageNameYouTube",
       "value" : "rvx.android.youtube"
     }, {
-      "key" : "PackageNameYouTubeMusic",
-      "value" : "rvx.android.youtube.music"
+        "key": "PackageNameYouTubeMusic",
+        "value": "rvx.android.youtube.music"
     } ]
   }, {
     "patchName": "Settings for YouTube",
