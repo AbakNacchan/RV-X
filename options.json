@@ -50,6 +50,12 @@
       "value" : "ar, id-rID, ja-rJP, ko-rKR"
     } ]
   }, {
+    "patchName": "Force player buttons background",
+    "options" : [ {
+      "key": "BackgroundColor",
+      "value": "@android:color/transparent"
+    } ]
+  }, {
     "patchName" : "Theme",
     "options" : [ {
       "key" : "DarkThemeBackgroundColor",
