@@ -1,11 +1,11 @@
 enable-magisk-update = true
 patches-version = "v2.228.0-dev.1"
-# integrations-version = "v0.154.0-dev.8"
+integrations-version = "v0.155.0-dev.1"
 
 
 [YouTube]
 build-mode = "both"
-included-patches = "'Custom branding icon for YouTube' 'Custom branding name for YouTube' 'Hide Shorts dimming' 'Force player buttons background' 'MaterialYou'"
+included-patches = "'Custom branding icon for YouTube' 'Custom branding name for YouTube' 'Hide Shorts dimming' 'MaterialYou'"
 excluded-patches = "'Alternative thumbnails' 'Bypass image region restrictions' 'Disable splash animation' 'Enable debug logging'"
 version = "19.28.42"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
