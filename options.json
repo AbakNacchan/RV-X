@@ -100,4 +100,10 @@
       "key" : "AppIcon",
       "value" : "mmt_blue"
     } ]
+  }, {
+    "patchName": "Change version code",
+    "options" : [ {
+      "key" : "ChangeVersionCode",
+      "value" : "19.28.42"
+    } ]
 } ]
