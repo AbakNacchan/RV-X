@@ -65,10 +65,13 @@
       "value" : "@android:color/white"
     } ]
   }, {
-    "patchName" : "Overlay buttons",
+    "patchName": "Overlay buttons",
     "options" : [ {
       "key" : "IconType",
       "value" : "rounded"
+    }, {
+      "key" : "ChangeTopButtons",
+      "value" : true
     } ]
   }, {
     "patchName": "Visual preferences icons",
