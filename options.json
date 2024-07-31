@@ -104,6 +104,6 @@
     "patchName": "Change version code",
     "options" : [ {
       "key" : "ChangeVersionCode",
-      "value" : 19.28.42
+      "value" : true
     } ]
 } ]
