@@ -77,7 +77,7 @@
     "patchName": "Visual preferences icons",
     "options": [ {
       "key" : "ExtendedIcon",
-      "value" : "revanced"
+      "value" : "yt_alt"
     } ]
   }, {
     "patchName" : "Force snackbar theme",
