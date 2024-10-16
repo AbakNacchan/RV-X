@@ -78,7 +78,7 @@
     "options": [ {
       "key" : "ExtendedIcon",
       "value" : "yt_alt"
-      } ]
+    } ]
   }, {
     "patchName": "Visual preferences icons for YouTube Music",
     "options": [ {
