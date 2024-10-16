@@ -74,10 +74,15 @@
       "value" : true
     } ]
   }, {
-    "patchName": "Visual preferences icons",
+    "patchName": "Visual preferences icons for YouTube",
     "options": [ {
       "key" : "ExtendedIcon",
       "value" : "yt_alt"
+  }, {
+    "patchName": "Visual preferences icons for YouTube Music",
+    "options": [ {
+      "key" : "ExtendedIcon",
+      "value" : "revanced"
     } ]
   }, {
     "patchName" : "Force snackbar theme",
